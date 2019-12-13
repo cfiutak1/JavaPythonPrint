@@ -1,7 +1,7 @@
 CFLAGS = -g -Wall -Wextra -DDEBUG
 
 nonbloat:
-	gcc $(CFLAGS) generator.py.cpp.c -o ggg
+	gcc $(CFLAGS) -std=c90 generator.py.cpp.c -o ggg
 	./ggg
 	g++ $(CFLAGS) generator.py.cpp -o gg
 	./gg
