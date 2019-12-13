@@ -1,8 +1,16 @@
-CFLAGS = -g -Wall -Wextra -DDEBUG -std=c++14
-CC = g++
+CFLAGS = -g -Wall -Wextra -DDEBUG
 
-all:
-	$(CC) $(CFLAGS) generator.py.cpp -o generator_generator
+nonbloat:
+	gcc $(CFLAGS) generator.py.cpp.c -o ggg
+	./ggg
+	g++ $(CFLAGS) generator.py.cpp -o gg
+	./gg
+	python3 generator.py
+
+bloat:
+	g++ $(CFLAGS) generator.py.cpp -o gg
+	./gg
+	python3 generator.py
 
 clean:
-	rm generator_generator
+	rm ggg gg

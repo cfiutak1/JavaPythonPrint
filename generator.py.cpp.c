@@ -2,7 +2,7 @@
 
 
 int
-main(int argc, char **argv) {
+main() {
     FILE *gfile;
 
     gfile = fopen("generator.py.cpp", "w");
